@@ -1,9 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const connection = fetch('/connection');
-// eslint-disable-next-line no-console
-console.log(connection);
+// TEST Server connection - Delete or comment out when verified
+const connection = async () => {
+  const test = await fetch('/connection');
+  const json = await test.json();
+
+  // eslint-disable-next-line no-alert
+  if (!test.ok) alert('Could not connect to Server');
+
+  // eslint-disable-next-line no-alert
+  alert(json);
+};
+
+connection();
 
 ReactDOM.render(
   <React.StrictMode>

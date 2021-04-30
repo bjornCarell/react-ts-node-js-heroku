@@ -1,2 +1,0 @@
-(this["webpackJsonpcreate-react-app-client"]=this["webpackJsonpcreate-react-app-client"]||[]).push([[0],{4:function(e,t,c){"use strict";c.r(t);var n=c(0),i=c.n(n),r=c(3),o=c.n(r),a=c(2),s=fetch("/connection");console.log(s),o.a.render(Object(a.jsx)(i.a.StrictMode,{children:Object(a.jsx)("div",{children:"The client is running"})}),document.getElementById("root"))}},[[4,1,2]]]);
-//# sourceMappingURL=main.fb50e869.chunk.js.map
