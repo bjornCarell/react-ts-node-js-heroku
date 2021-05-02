@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // TEST Server connection - Delete or comment out when verified
-const connection = async () => {
+const connection = async ():Promise<any> => {
   const test = await fetch('/connection');
   const json = await test.json();
 
@@ -15,9 +15,15 @@ const connection = async () => {
 
 connection();
 
+type ClientText = {
+  text: string
+}
+
+const ClientMsg = ({ text }: ClientText): JSX.Element => <div>{text}</div>;
+
 ReactDOM.render(
   <React.StrictMode>
-    <div>The client is running</div>
+    <ClientMsg text="Client is running" />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
