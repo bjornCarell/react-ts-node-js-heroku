@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "test:server": "NODE_ENV=test npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file src/mocha-setup.js",
     "client": "cd client && npm start",
     "server": "babel-node -r esm server/server.js",
+    "test": "NODE_ENV=test npx mocha \"server/**/*.test.js\" --recursive --require @babel/register --file mocha-setup.js",
     "dev": "concurrently --kill-others-on-fail \"nodemon --exec babel-node -r esm server/server.js\" \"npm run client\"",
     "postinstall": "cd client && npm install"
   },
